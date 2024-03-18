@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"  href="style.css"> 
+<title>Imagens e Vídeos</title>
+<style>
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #264b4b;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .column {
+        width: calc(33.33% - 20px);
+        margin-bottom: 20px;
+    }
+    .column img,
+    .column video {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    .column img:hover,
+    .column video:hover {
+        transform: scale(1.05);
+    }
+</style>
+</head>
+<body>
+    <h2 style="color: hwb(240 60% 4% / 0.612); font-family:Georgia, 'Times New Roman', Times, serif"><center>CATÁLOGO</center></h2>
+<div class="container">
+    <div class="column">
+        <img src="img/avatar.jpeg" alt="Imagem 1" onclick="openMedia(this.src)">
+    </div>
+    <div class="column">
+        <img src="img/basquete.jpeg" alt="Imagem 2" onclick="openMedia(this.src)">
+    </div>
+    <div class="column">
+        <img src="img/invocaçaodomal.jpeg" alt="Imagem 3" onclick="openMedia(this.src)">
+    </div>
+
+    <div class="column">
+        <iframe width="383" height="315" src="https://www.youtube.com/embed/x5pZI-DmtrE?si=uSRHW9Vi7I54ukJu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
+    </div>
+
+    <div class="column">
+        <iframe width="383" height="315" src="https://www.youtube.com/embed/vIMm04L916I?si=IjIk8ebsu7KK6sl0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div class="column">
+        <iframe width="383" height="315" src="https://www.youtube.com/embed/l3LQgORbhu4?si=dPFV8bEJftZU4npO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>      
+    </div>
+</div>
+
+<script>
+    function openMedia(source) {
+        window.open(source);
+    }
+</script>
+</body>
+</html>

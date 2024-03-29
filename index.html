@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imagens e Vídeos</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color:#3393d2;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .column {
+        width: calc(33.33% - 20px);
+        margin-bottom: 20px;
+    }
+    .column img,
+    .column iframe {
+        width: 100%;
+        height: 200px; /* Altura fixa para as imagens */
+        object-fit: cover; /* Para manter proporções */
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    .column img:hover,
+    .column iframe:hover {
+        transform: scale(1.05);
+    }
+    /*responsividade*/
+    @media screen and (max-width: 1024px) {
+        .column {
+            width: calc(50% - 20px);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .column {
+            width: calc(50% - 20px);
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .column {
+            width: 100%;
+        }
+    }   
+    /*personalização das imgs*/
+    img {
+    width: 100%; /* Largura de 100% */
+    height: auto; /* Altura automática para manter a proporção */
+    border-radius: 20px; /* Borda arredondada */
+    margin-bottom: 10px; /* Margem inferior de 10px */
+
+
+    width: 100%;
+    height: auto;
+    border: 2px solid #1278bc; /* Borda sólida de cor azul */
+    padding: 5px; /* Preenchimento interno de 5px */
+
+
+    width: 100%;
+    height: auto;
+ 
+}
+iframe {
+    border: 2px solid #1278bc ; /* Borda sólida de cor azul */
+    padding: 5px; /* Preenchimento interno de 5px */
+    border-radius: 20px; /* Borda arredondada */
+    margin-bottom: 10px; /* Margem inferior de 10px */
+
+}
+
+</style>
+</head>
+<body>
+    <h2 style="color: rgb(27, 30, 216); font-family:Georgia, 'Times New Roman', Times, serif"><center>Galeria</center></h2>
+<div class="container">
+
+    <div class="column">
+        <img src="img/img1.jpeg" alt="Imagem 1" onclick="openMedia(this.src)">
+    </div>
+
+    <div class="column">
+        <img src="img/img2.jpeg" alt="Imagem 2" onclick="openMedia(this.src)">
+    </div>
+
+    <div class="column">
+        <img src="img/img3.jpeg" alt="Imagem 3" onclick="openMedia(this.src)">
+    </div>
+
+    <div class="column">
+        <img src="img/img4.jpeg" alt="Imagem 4" onclick="openMedia(this.src)">
+    </div>
+
+    <div class="column">
+        <img src="img/img5.jpeg" alt="Imagem 5" onclick="openMedia(this.src)">
+    </div>
+    
+    <div class="column">
+        <img src="img/img6.jpeg" alt="Imagem 6" onclick="openMedia(this.src)">
+    </div>
+
+    <div class="column">
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/H7Wz8GnQYPs?si=MDQTQpQFBndenXHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="column">
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/M6YIu5bVaSo?si=Rq3Fe5yOT_NzAZgg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="column">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/__ARpfWJvg4?si=3Hz7AXhksR5i0YRm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+    </div>
+</div>
+
+<script>
+    function openMedia(source) {
+        window.open(source);
+    }
+</script>
+</body>
+</html>
